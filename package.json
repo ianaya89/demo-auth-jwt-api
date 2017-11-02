@@ -1,11 +1,37 @@
 {
-  "name": "demo-auth-api",
+  "name": "demo-auth-jwt-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Express demo API with JWT Authentication",
+  "main": "/bin/api",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "config": "./bin/config --explain-config",
+    "dev": "nodemon ./bin/api",
+    "deploy": "./now.sh",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --fix .js",
+    "start": "./bin/demo-auth-api"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Ignacio Anaya <ignacio.anaya89@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "express-jwt": "^5.3.0",
+    "figlet": "^1.2.0",
+    "milieu": "^1.7.1",
+    "pretty-ms": "^3.0.0",
+    "request": "^2.81.0",
+    "winston": "^2.3.1",
+    "winston-child-logger": "0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.11.0"
+  }
 }

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+require('../splash')
+
+const api = require('../')
+
+api.start((err, result) => {
+  if (err) { throw err }
+  api.logger.info(`Listening for HTTP requests at ${result.url}`)
+})
