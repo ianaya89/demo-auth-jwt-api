@@ -9,7 +9,7 @@
     "deploy": "./now.sh",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --fix .js",
-    "start": "./bin/demo-auth-api"
+    "start": "./bin/api"
   },
   "author": "Ignacio Anaya <ignacio.anaya89@gmail.com>",
   "license": "MIT",
