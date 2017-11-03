@@ -23,7 +23,7 @@ const auth = function (req, res, next) {
   }
 
   req.logger.verbose(`Authorizing user with ${req.body.email} 🙌`)
-  delete user.password
+  // delete user.password
 
   const token = `Bearer ${jwt.sign(user, req.config.secret)}`
   res.send(200, { token })
